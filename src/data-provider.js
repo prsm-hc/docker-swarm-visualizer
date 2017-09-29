@@ -197,7 +197,13 @@ updateContainers = (containers, services) => {
   for(let node of nodes) {
     node.children = [];
   }
-
+  containers.sort(
+    function(a, b) { 
+      if (a < b) return -1;
+      else if (a > b) return 1;
+      else return 0;
+    }
+  );
   for (let container of containers) {
     let contNodeId = container.NodeID;
     let service = _.find(services, function(o) { return o.ID == container.ServiceID; });
