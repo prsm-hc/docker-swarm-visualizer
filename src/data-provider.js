@@ -78,7 +78,7 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
     let dateStamp = dt.getFullYear()+"-"+(dt.getMonth()+1)+"/"+dt.getDate();
     let startState=cloned.Status.State;
 
-    let imageTag ="<div style='height: 100%; padding: 5px 5px 5px 5px; border: 2px solid white'>"+
+    let imageTag ="<div style='height: 100%; padding: 5px 5px 5px 5px;'>"+
         "<span class='contname' style='color: white; font-weight: bold;font-size: 12px'>"+ serviceName +"</span>"+
         "<br/> image : " + imageNameMatches[0] +
         "<br/> tag : " + (tagName ? tagName : "latest") +
