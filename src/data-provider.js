@@ -75,11 +75,8 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
     let imageNameRegex = /([^/]+?)(\:([^/]+))?$/;
     let imageNameMatches = imageNameRegex.exec(cloned.Spec.ContainerSpec.Image);
     let tagName = imageNameMatches[3];
-    let dateStamp = dt.getDate()+"/"+(dt.getMonth()+1)+" "+ dt.getHours()+":"+dt.getMinutes();
+    let dateStamp = dt.getFullYear()+"-"+(dt.getMonth()+1)+"/"+dt.getDate();
     let startState=cloned.Status.State;
-
-
-
 
     let imageTag ="<div style='height: 100%; padding: 5px 5px 5px 5px; border: 2px solid white'>"+
         "<span class='contname' style='color: white; font-weight: bold;font-size: 12px'>"+ serviceName +"</span>"+
@@ -87,7 +84,7 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
         "<br/> tag : " + (tagName ? tagName : "latest") +
         "<br/>" + (cloned.Spec.ContainerSpec.Args?" cmd : "+cloned.Spec.ContainerSpec.Args+"<br/>" : "" ) +
         " updated : " + dateStamp +
-        "<br/>"+ cloned.Status.ContainerStatus.ContainerID +
+        "<br/>"+ cloned.Status.ContainerStatus.ContainerID.substring(0, 10) + "..." +
         "<br/> state : "+startState +
         "</div>";
 
