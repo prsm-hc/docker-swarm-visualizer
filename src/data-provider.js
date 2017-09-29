@@ -78,7 +78,7 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
     let dateStamp = dt.getFullYear()+"-"+(dt.getMonth()+1)+"-"+dt.getDate();
     let startState=cloned.Status.State;
 
-    let imageTag ="<div style='height: 100%; padding: 5px 5px 5px 5px;'>"+
+    let imageTag ="<div style='height: 100%; padding: 5px 5px 5px 5px;' onclick='location.href = \"//vpn.prsmcare.com:9000/#/containers/" + cloned.Status.ContainerStatus.ContainerID + "\"'>"+
         "<span class='contname' style='color: white;'>"+ serviceName +"</span>"+
         "<br/> image : " + imageNameMatches[0] +
         "<br/> tag : " + (tagName ? tagName : "latest") +
