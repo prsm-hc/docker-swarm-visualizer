@@ -79,7 +79,7 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
     let startState=cloned.Status.State;
 
     let imageTag ="<div style='height: 100%; padding: 5px 5px 5px 5px;'>"+
-        "<span class='contname' style='color: white; font-weight: bold;font-size: 12px'>"+ serviceName +"</span>"+
+        "<span class='contname' style='color: white;'>"+ serviceName +"</span>"+
         "<br/> image : " + imageNameMatches[0] +
         "<br/> tag : " + (tagName ? tagName : "latest") +
         "<br/>" + (cloned.Spec.ContainerSpec.Args?" cmd : "+cloned.Spec.ContainerSpec.Args+"<br/>" : "" ) +
