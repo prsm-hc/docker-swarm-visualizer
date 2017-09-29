@@ -75,7 +75,7 @@ let physicalStructProvider = ([initialNodes, initialContainers]) => {
     let imageNameRegex = /([^/]+?)(\:([^/]+))?$/;
     let imageNameMatches = imageNameRegex.exec(cloned.Spec.ContainerSpec.Image);
     let tagName = imageNameMatches[3];
-    let dateStamp = dt.getFullYear()+"-"+(dt.getMonth()+1)+"/"+dt.getDate();
+    let dateStamp = dt.getFullYear()+"-"+(dt.getMonth()+1)+"-"+dt.getDate();
     let startState=cloned.Status.State;
 
     let imageTag ="<div style='height: 100%; padding: 5px 5px 5px 5px;'>"+
